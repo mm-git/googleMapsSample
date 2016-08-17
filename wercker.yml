@@ -1,0 +1,11 @@
+box: mmgit/hugo-box
+build:
+  steps:
+deploy:
+  steps:
+    - leipert/git-push:
+        host: github.com
+        gh_oauth: $GIT_TOKEN
+        repo: mm-git/googleMapsSample
+        branch: gh-pages
+        basedir: public
