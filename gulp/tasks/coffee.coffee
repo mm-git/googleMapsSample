@@ -46,18 +46,9 @@ gulp.task 'coffee', ->
       @emit('end')
   }))
   .pipe(gulp_webpack(webpackConfig))
+  .pipe(gulp.dest(config.dest + '/js'))
   .pipe(uglify())
   .pipe(rename({
     extname: '.min.js'
   }))
-  .pipe(gulp.dest(config.dest + '/js'))
-
-gulp.task 'coffee:debug', ->
-  gulp.src(config.src)
-  .pipe(plumber({
-    errorHandler: (err) ->
-      console.log(err.messageFormatted);
-      @emit('end')
-  }))
-  .pipe(gulp_webpack(webpackConfig))
   .pipe(gulp.dest(config.dest + '/js'))

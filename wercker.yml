@@ -1,0 +1,8 @@
+box: debian
+deploy:
+  steps:
+    - leipert/git-push:
+        gh_oauth: $GIT_TOKEN
+        repo: mm-git/googleMapsSample
+        branch: gh-pages
+        basedir: public

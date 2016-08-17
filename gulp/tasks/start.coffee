@@ -18,7 +18,3 @@ gulp.task 'reload', ->
 gulp.task 'start', ['connect'], ->
   gulp.watch(config.src + '/**/*.coffee', ['coffee'])
   gulp.watch(config.dest + "/**/*", ['reload'])
-
-gulp.task 'start:debug', ['connect'], ->
-  gulp.watch(config.src + '/**/*.coffee', ['coffee:debug'])
-  gulp.watch(config.dest + "/**/*", ['reload'])
