@@ -10,10 +10,9 @@ class MapView extends Backbone.View
 
   loadMap: ->
     new Promise((resolve, reject) =>
-      #GoogleMapsLoader.KEY = 'your key';
-      GoogleMapsLoader.LANGUAGE = 'ja';
+      GoogleMapsLoader.KEY = 'AIzaSyCgazv4sqh1i3TX66s9cZ9xC0SJt-jXoj0'
+      GoogleMapsLoader.LANGUAGE = 'ja'
       GoogleMapsLoader.LIBRARIES = ['geometry', 'places']
-
 
       GoogleMapsLoader.load((google) =>
         mapOpt =

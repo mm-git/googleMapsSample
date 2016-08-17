@@ -12619,6 +12619,7 @@
 	  MapView.prototype.loadMap = function() {
 	    return new Promise((function(_this) {
 	      return function(resolve, reject) {
+	        GoogleMapsLoader.KEY = 'AIzaSyCgazv4sqh1i3TX66s9cZ9xC0SJt-jXoj0';
 	        GoogleMapsLoader.LANGUAGE = 'ja';
 	        GoogleMapsLoader.LIBRARIES = ['geometry', 'places'];
 	        return GoogleMapsLoader.load(function(google) {
